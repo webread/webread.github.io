@@ -1099,7 +1099,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background-color: #f7f7f7;
+  background-color: #f5f7fa;
 }
 .header-inner {
   position: relative;
@@ -1120,10 +1120,12 @@ pre .javascript .function {
 .brand {
   position: relative;
   display: inline-block;
-  padding: 0 40px;
+  padding: 8px 50px;
   color: #fff;
   background: #222;
   border-bottom: none;
+  background-color: #1aa8d7;
+  border-radius: 5px;
 }
 .brand:hover {
   color: #fff;
@@ -1687,7 +1689,7 @@ pre .javascript .function {
   width: 0;
   z-index: 1040;
   box-shadow: inset 0 2px 6px #000;
-  background: #222;
+  background-color: #4f4f50;
   -webkit-transform: translateZ(0);
 }
 .sidebar a,
@@ -1729,7 +1731,7 @@ pre .javascript .function {
   width: 14px;
   height: 14px;
   padding: 5px;
-  background: #222;
+  background-color: #4f4f50;
   line-height: 0;
   z-index: 1050;
   cursor: pointer;
@@ -1772,6 +1774,7 @@ pre .javascript .function {
   text-align: center;
   color: #f5f5f5;
   font-weight: normal;
+  background-color: #1aa8d7;
 }
 .site-description {
   margin-top: 5px;
@@ -1924,17 +1927,17 @@ img:hover {
 .feed-link a {
   display: inline-block;
   padding: 0 15px;
-  color: #fc6423;
-  border: 1px solid #fc6423;
+  color: #068fdb;
+  border: 1px solid #068fdb;
   border-radius: 4px;
 }
 .feed-link a i {
-  color: #fc6423;
+  color: #068fdb;
   font-size: 14px;
 }
 .feed-link a:hover {
   color: #fff;
-  background: #fc6423;
+  background: #068fdb;
 }
 .feed-link a:hover i {
   color: #fff;
@@ -1960,7 +1963,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c8d2ff;
+  background: #08b178;
 }
 .links-of-blogroll {
   font-size: 13px;
