@@ -1099,7 +1099,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: url("../image/head.jpg");
+  background-color: #f7f7f7;
 }
 .header-inner {
   position: relative;
@@ -1764,7 +1764,8 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
-  opacity: 1;
+  border-radius: 60%;
+  transition: 2.5s all;
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1792,6 +1793,13 @@ pre .javascript .function {
   -webkit-transition: -webkit-transform 1s ease-out;
   -moz-transition: -moz-transform 1s ease-out;
   transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 img:hover {
   -webkit-transform: rotateZ(360deg);
@@ -1952,7 +1960,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #88267a;
+  background: #c8d2ff;
 }
 .links-of-blogroll {
   font-size: 13px;
