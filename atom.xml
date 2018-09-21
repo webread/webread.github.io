@@ -62,20 +62,20 @@
   </entry>
   
   <entry>
-    <title>第一篇博客</title>
-    <link href="http://yoursite.com/2018/09/18/hello-world/"/>
-    <id>http://yoursite.com/2018/09/18/hello-world/</id>
+    <title>hexo + github 搭建博客</title>
+    <link href="http://yoursite.com/2018/09/18/zerolog/"/>
+    <id>http://yoursite.com/2018/09/18/zerolog/</id>
     <published>2018-09-18T08:54:47.718Z</published>
-    <updated>2018-09-20T02:22:34.039Z</updated>
+    <updated>2018-09-21T09:25:44.478Z</updated>
     
-    <content type="html"><![CDATA[<p>大家好，我是流浪兔，欢迎浏览我的博客。</p><h2 id="2级标题"><a href="#2级标题" class="headerlink" title="2级标题"></a>2级标题</h2><h3 id="3级标题"><a href="#3级标题" class="headerlink" title="3级标题"></a>3级标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">链接描述</a></p><h3 id="3级标题-1"><a href="#3级标题-1" class="headerlink" title="3级标题"></a>3级标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">链接描述</a></p><h3 id="3级标题-2"><a href="#3级标题-2" class="headerlink" title="3级标题"></a>3级标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">链接描述</a></p><h3 id="3级标题-3"><a href="#3级标题-3" class="headerlink" title="3级标题"></a>3级标题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">链接描述</a></p>]]></content>
+    <content type="html"><![CDATA[<p>大家好，我是流浪兔，欢迎浏览我的博客。<br>终于搭建了一个属于自己的博客，这个过程也遇到过一些小坑，记录一下搭建博客的一个过程，希望对各位有所帮助。</p><h3 id="github-注册账户"><a href="#github-注册账户" class="headerlink" title="github 注册账户"></a>github 注册账户</h3><p>github 地址：<a href="https://github.com/" target="_blank" rel="noopener">go to github</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：给自己起一个好听的名字奥，这样你的URL地址就会显得高大上一些（reposltory name）</span><br></pre></td></tr></table></figure><h3 id="安装node和git"><a href="#安装node和git" class="headerlink" title="安装node和git"></a>安装node和git</h3><p>这里省略一千字，具体可以问度娘</p><h3 id="hexo-安装"><a href="#hexo-安装" class="headerlink" title="hexo 安装"></a>hexo 安装</h3><p>hexo 是一个快速高效的node.js静态博客框架，hexo使用markdown解析文章（所以赶快下载一个markdown工具吧）,<br>hexo 的安装这里省略一千字<br>但是请牢记hexo常用的命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo -clean //清除缓存文件</span><br><span class="line">hexo -g //生成静态文件</span><br><span class="line">hexo -s//启动本地服务，浏览本地效果</span><br><span class="line">hexo -d//把项目提交到github上，并且在https://yourname/yourname.github.io浏览效果</span><br></pre></td></tr></table></figure><p>认识hexo: <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo</a></p><p>你的博客生成后，可能对主题不满意，至于怎么改变主题这里省去一千字，因为网上都有，我想说的是，有时候你可能对生成的主题锦上添花，<br>不妨先熟悉一下hexo 对应主题下的模板文件，每个文件（不管是CSS还是HTML），都可进行扩展和更改。</p><h3 id="发布我的第一篇博客"><a href="#发布我的第一篇博客" class="headerlink" title="发布我的第一篇博客"></a>发布我的第一篇博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">start:</span><br><span class="line">hexo -n <span class="string">"firstLog"</span> //新建文章</span><br><span class="line">//编辑新生成的firstLog.md文件</span><br><span class="line">hexo -clean</span><br><span class="line">hexo -g</span><br><span class="line">hexo -d//发布即可</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">/*hexo -new page <span class="string">"firstFile"</span>//新建页面*/</span><br></pre></td></tr></table></figure><p>好了暂且分享这么多，有什么坑以后可大家再分享，谢谢。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;大家好，我是流浪兔，欢迎浏览我的博客。&lt;/p&gt;
-&lt;h2 id=&quot;2级标题&quot;&gt;&lt;a href=&quot;#2级标题&quot; class=&quot;headerlink&quot; title=&quot;2级标题&quot;&gt;&lt;/a&gt;2级标题&lt;/h2&gt;&lt;h3 id=&quot;3级标题&quot;&gt;&lt;a href=&quot;#3级标题&quot; class=&quot;h
+        &lt;p&gt;大家好，我是流浪兔，欢迎浏览我的博客。&lt;br&gt;终于搭建了一个属于自己的博客，这个过程也遇到过一些小坑，记录一下搭建博客的一个过程，希望对各位有所帮助。&lt;/p&gt;
+&lt;h3 id=&quot;github-注册账户&quot;&gt;&lt;a href=&quot;#github-注册账户&quot; class=&quot;header
       
     
     </summary>
