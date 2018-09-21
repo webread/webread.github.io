@@ -41,20 +41,19 @@
   </entry>
   
   <entry>
-    <title>第二篇博客</title>
+    <title>height auto 和 height</title>
     <link href="http://yoursite.com/2018/09/19/firstlog/"/>
     <id>http://yoursite.com/2018/09/19/firstlog/</id>
     <published>2018-09-19T06:45:36.441Z</published>
-    <updated>2018-09-20T02:24:20.790Z</updated>
+    <updated>2018-09-21T08:56:10.769Z</updated>
     
-    <content type="html"><![CDATA[<p>this is firstlog</p><h2 id="firstLog"><a href="#firstLog" class="headerlink" title="firstLog"></a>firstLog</h2><h3 id="firstLog-1"><a href="#firstLog-1" class="headerlink" title="firstLog"></a>firstLog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">链接描述</a></p><h3 id="firstLog-2"><a href="#firstLog-2" class="headerlink" title="firstLog"></a>firstLog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">链接描述</a></p><h3 id="firstLog-3"><a href="#firstLog-3" class="headerlink" title="firstLog"></a>firstLog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">链接描述</a></p><h3 id="firstLog-4"><a href="#firstLog-4" class="headerlink" title="firstLog"></a>firstLog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码演示部分</span><br></pre></td></tr></table></figure><p>link: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">链接描述</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="height-auto"><a href="#height-auto" class="headerlink" title="height:auto"></a>height:auto</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">&lt;div style=<span class="string">"height:auto"</span>&gt;我会随着内容多少而高度发生变化&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><h3 id="firstLog"><a href="#firstLog" class="headerlink" title="firstLog"></a>firstLog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=<span class="string">"height:100px;"</span>&gt;</span><br><span class="line">&lt;div style=<span class="string">"height:100%"</span>&gt;我要继承父元素的高度&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;this is firstlog&lt;/p&gt;
-&lt;h2 id=&quot;firstLog&quot;&gt;&lt;a href=&quot;#firstLog&quot; class=&quot;headerlink&quot; title=&quot;firstLog&quot;&gt;&lt;/a&gt;firstLog&lt;/h2&gt;&lt;h3 id=&quot;firstLog-1&quot;&gt;&lt;a hr
+        &lt;h3 id=&quot;height-auto&quot;&gt;&lt;a href=&quot;#height-auto&quot; class=&quot;headerlink&quot; title=&quot;height:auto&quot;&gt;&lt;/a&gt;height:auto&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table
       
     
     </summary>
