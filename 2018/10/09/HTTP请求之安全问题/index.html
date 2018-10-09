@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="流浪兔的博客">
 <meta property="og:description" content="HTTP 8种请求方法想了解http协议: http协议1.option : 返回服务器对特定资源所支持的HTML请求方法，或者web服务器发送“测试服务功能”（允许客户端查看服务器功能）；2.get : 向特定资源发出请求（请求制定页面信息，返回实体主体）；3.post : 向指定资源提交数据进行处理请求（提交表单，上传文件），有可能导致新的资源建立和原有资源的修改；4.put : 向指定资源位">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-09T02:05:17.396Z">
+<meta property="og:updated_time" content="2018-10-09T02:07:22.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP请求之安全问题">
 <meta name="twitter:description" content="HTTP 8种请求方法想了解http协议: http协议1.option : 返回服务器对特定资源所支持的HTML请求方法，或者web服务器发送“测试服务功能”（允许客户端查看服务器功能）；2.get : 向特定资源发出请求（请求制定页面信息，返回实体主体）；3.post : 向指定资源提交数据进行处理请求（提交表单，上传文件），有可能导致新的资源建立和原有资源的修改；4.put : 向指定资源位">
@@ -336,7 +336,7 @@
                 
               
 
-              <time title="创建时间：2018-10-09 09:21:30 / 修改时间：10:05:17" itemprop="dateCreated datePublished" datetime="2018-10-09T09:21:30+08:00">2018-10-09</time>
+              <time title="创建时间：2018-10-09 09:21:30 / 修改时间：10:07:22" itemprop="dateCreated datePublished" datetime="2018-10-09T09:21:30+08:00">2018-10-09</time>
             
 
             
@@ -375,7 +375,6 @@
 
       
         <h3 id="HTTP-8种请求方法"><a href="#HTTP-8种请求方法" class="headerlink" title="HTTP 8种请求方法"></a>HTTP 8种请求方法</h3><p>想了解http协议: <a href="http://blog.csdn.net/ahaaaaa/article/details/51063598" target="_blank" rel="noopener">http协议</a><br>1.option : 返回服务器对特定资源所支持的HTML请求方法，或者web服务器发送“测试服务功能”（允许客户端查看服务器功能）；<br>2.get : 向特定资源发出请求（请求制定页面信息，返回实体主体）；<br>3.post : 向指定资源提交数据进行处理请求（提交表单，上传文件），有可能导致新的资源建立和原有资源的修改；<br>4.put : 向指定资源位置上传其最新内容（从客户端向服务器传送的数据取代制定的文档内容）；<br>5.head : 与get请求一致的内容，但响应体不会返回，获取包含在消息头部的原信息（用于获取头部内容）；<br>6.delete : 请求服务器删除request-URL所标识的资源，（请求服务器删除页面）；<br>7.trace : 回显服务器收到的请求，用于测试和诊断；<br>8.connect HTTP/1.1协议中能够将连接改为管道方式的代理服务器；</p>
-<p>DOJO/SELECT: <a href="http://dojotoolkit.org/reference-guide/1.8/dijit/form/Select.html" target="_blank" rel="noopener">dojo/select</a></p>
 <h3 id="get-和-post的区别"><a href="#get-和-post的区别" class="headerlink" title="get 和 post的区别"></a>get 和 post的区别</h3><p>首先get和post都是通过TCP来传输数据的，TCP就像一辆辆运输数据的火车，为了区别货车的区别就贴上get和post<br>标签。简单的说，get产生一个TCP数据包，而post产生两个TCP数据包。对于get请求，浏览器会把header和data一起发<br>出去，服务器返回200（返回数据）；对于post请求，浏览器先发送header请求，服务器返回100 continue,浏览器再<br>继续发送data请求，服务器返回200；<br>也就是说，GET只需要汽车跑一趟就把货送到了，而POST得跑两趟，第一趟，先去和服务器打个招呼“嗨，我等下要送一批货来，你们打开门迎接我”，然后再回头把货送过去。</p>
 <h3 id="HTTP的安全请求"><a href="#HTTP的安全请求" class="headerlink" title="HTTP的安全请求"></a>HTTP的安全请求</h3><p>不安全的HTTP请求方式会造成系统的文件的上传和删除，从而对系统的完整性和可用性造成破坏。原因如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码开发时没有对请求凡是做限制：</span><br><span class="line">不规范代码如 @RequestMapping(value=<span class="string">"/test"</span>)</span><br><span class="line">规范代码如：@ReauestMapping(value=<span class="string">"/test"</span>,method=<span class="string">"get"</span>)</span><br></pre></td></tr></table></figure>
