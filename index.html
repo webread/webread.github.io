@@ -294,6 +294,309 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/数组之前的赋值问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="流浪兔">
+      <meta itemprop="description" content="前端开发知识分享">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="流浪兔的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/13/数组之前的赋值问题/" itemprop="url">
+                  数组之前的赋值带来的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-13 16:38:25 / 修改时间：10:34:35" itemprop="dateCreated datePublished" datetime="2018-11-13T16:38:25+08:00">2018-11-13</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="数组1赋值给数组2-数组2长度发生变化-影响原来的数组1"><a href="#数组1赋值给数组2-数组2长度发生变化-影响原来的数组1" class="headerlink" title="数组1赋值给数组2 数组2长度发生变化 影响原来的数组1"></a>数组1赋值给数组2 数组2长度发生变化 影响原来的数组1</h3><p>业务场景：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var ARR1 = [1,2,3,4,5];</span><br><span class="line">var ARR2 = ARR1;</span><br><span class="line">ARR2.push(10);</span><br><span class="line">console.log(ARR1) //[1,2,3,4,5,10]</span><br></pre></td></tr></table></figure>
+<p>解决方案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var ARR1 = [1,2,3,4,5];</span><br><span class="line">var ARR2 = JSON.parse(JSON.stringify(ARR1));</span><br><span class="line">ARR2.push(10);</span><br><span class="line">console.log(ARR1) //[1,2,3,4,5]</span><br><span class="line">console.log(ARR2) //[1,2,3,4,5,10]</span><br></pre></td></tr></table></figure>
+<p>当然还有另外两种方法去解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopsy(obj)&#123;</span><br><span class="line">	<span class="keyword">if</span>(typeOf obj != <span class="string">"object"</span>)&#123;</span><br><span class="line">		<span class="built_in">return</span> obj;</span><br><span class="line">	&#125;</span><br><span class="line">	var json = JSON.stringify(obj);</span><br><span class="line">	var newObj = JSON.parse(json);</span><br><span class="line">	<span class="built_in">return</span> newObj;</span><br><span class="line">&#125;</span><br><span class="line">var ARR1 = [1,2,3,4,5];</span><br><span class="line">var ARR2 = deepCopsy(ARR1);</span><br><span class="line">ARR2.push(10);</span><br><span class="line">console.log(ARR1) //[1,2,3,4,5]</span><br><span class="line">console.log(ARR2) //[1,2,3,4,5,10]</span><br></pre></td></tr></table></figure>
+<p>下面这种用jQuery的方法:将ARR1递归到ARR2，改变ARR2的属性，不改变ARR1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var ARR1 = [1,2,3,4,5];</span><br><span class="line">var ARR2 = $.extend([],ARR1);</span><br><span class="line">ARR2.push(10);</span><br><span class="line">console.log(ARR1) //[1,2,3,4,5]</span><br><span class="line">console.log(ARR2) //[1,2,3,4,5,10]</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/15/项目中遇到的安全问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="流浪兔">
+      <meta itemprop="description" content="前端开发知识分享">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="流浪兔的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/15/项目中遇到的安全问题/" itemprop="url">
+                  项目中遇到的安全问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-15 16:38:25" itemprop="dateCreated datePublished" datetime="2018-10-15T16:38:25+08:00">2018-10-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-13 10:18:45" itemprop="dateModified" datetime="2018-11-13T10:18:45+08:00">2018-11-13</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="token的原理和作用"><a href="#token的原理和作用" class="headerlink" title="token的原理和作用"></a>token的原理和作用</h3><p>token,就是令牌，最大的特点就是随机性，不可预测，一般黑客或者软件无法猜测出来的。<br>一般用在2个地方：<br>1.防止表单重复提交；<br>2.anti csrf(跨站点请求伪造);</p>
+<h3 id="HTTP-token在URL中或者在文档中暴露的解决方式有哪些？"><a href="#HTTP-token在URL中或者在文档中暴露的解决方式有哪些？" class="headerlink" title="HTTP token在URL中或者在文档中暴露的解决方式有哪些？"></a>HTTP token在URL中或者在文档中暴露的解决方式有哪些？</h3><p>为了token不暴露在URL或者body中，目前前段把token设置到headers中，后台去读取</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/09/HTTP请求之安全问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -951,7 +1254,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -970,7 +1273,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
