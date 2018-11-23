@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-13T02:34:35.676Z</updated>
+  <updated>2018-11-23T03:19:45.154Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue 日志总结(1)</title>
+    <link href="http://yoursite.com/2018/11/23/vue-%E6%97%A5%E5%BF%97%E6%80%BB%E7%BB%93-1/"/>
+    <id>http://yoursite.com/2018/11/23/vue-日志总结-1/</id>
+    <published>2018-11-23T01:23:46.000Z</published>
+    <updated>2018-11-23T03:19:45.154Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="vue的理解"><a href="#vue的理解" class="headerlink" title="vue的理解"></a>vue的理解</h3><p>vue是HTML文本的JS模板，是一个轻量级的可以实现双向数据绑定的前端框架；</p><h3 id="vue的基础要点"><a href="#vue的基础要点" class="headerlink" title="vue的基础要点"></a>vue的基础要点</h3><p>1.vue初始化 略</p><p>2.vue的属性方法<br>2.1 vue 之component<br>组件注册时，要提供组件名和模板内容<br>Vue.component(MyComponent,{<!--  -->});<br>MyComponent 是组件名称<br>在HTML中引入该组件时 最好这样写：<my-component></my-component><br>注意：显示项目中并不需要注册那么多全局组件，我们只需要在当前组件文档中新建一个子组件就可以了。有些基础组件是常用的，可以注册为全局组件，具体如何操作请浏览一下地址：<br>详情查看：(<a href="https://cn.vuejs.org/v2/guide/components-registration.html" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/components-registration.html</a>)</p><p>2.2 vue 之data</p><p>2.3 vue 之v-html &amp;&amp; v-text<br>v-html=”变量名称” DOM<br>v-text=”变量名称” 文本 </p><p>2.4 vue 之v-bind:属性（class,href,title,style等）<br>可以省略为  ：属性名称=”变量名称”</p><p>2.5 vue 之：class和：style的集中表达方式<br>:class=对象的时候，{classA:true},classA是类名<br>:class=数组的时候，[classA,classB]，classA和classB是类名<br>:class=”[三元表达式：布尔值？类名：类名B]”<br>:class=”[{classB:true},classA]”</p><p>:style=对象的时候 objectStyle={color:”red”,fontSize:”12px;”}<br>:style=数组的时候 styleArr = [objectStyle1,objectStyle2]</p><p>2.6 vue 之v-for(数组和对象操作)<br>v-for=”item in arr” 或者 v-for=”(item,index) in arr”<br>v-for=”value in obj” 或者 v-for=”(value,key) in obj”</p><p>2.7 vue 之v-if 和 v-else<br>v-if=”布尔值” 如果为true则渲染节点 支持<template v-if="ok">展示或隐藏</template><br>v-else=”布尔值” 否则消除节点<br>v-show 隐藏或者展示出节点 不支持<template></template></p><p>2.8 vue 之v-on<br>v-on:click = @click<br>@click = “方法名称” 或者 @click=”方法名称（arg）”</p><p>2.9 vue 之v-model 表单输入绑定<br>单选初始化checked:””<br>多选：checked[]<br>详情查看：(<a href="https://cn.vuejs.org/v2/guide/forms.html#%E5%A4%8D%E9%80%89%E6%A1%86" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/forms.html#%E5%A4%8D%E9%80%89%E6%A1%86</a>)</p><p>2.10 vue之Props<br>props:[变量1，变量2] <!-- 变零1和变量2都是传递给子组件的数据 --><br>props中变量的命名：驼峰法：dataName<br>那写在文档中的时候最好是data-name<br>props = [变量名] 或者 props={变量名：”值”}都可以</p><p>###vue的methods,computed watch区别<br>computed 在HTMLDOM加载后马上执行，如赋值<br>methods 需要出发如click才执行<br>wtach都是在computed或者methods后才开始执行，用于观察Vue实例上的数据变动</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;vue的理解&quot;&gt;&lt;a href=&quot;#vue的理解&quot; class=&quot;headerlink&quot; title=&quot;vue的理解&quot;&gt;&lt;/a&gt;vue的理解&lt;/h3&gt;&lt;p&gt;vue是HTML文本的JS模板，是一个轻量级的可以实现双向数据绑定的前端框架；&lt;/p&gt;
+&lt;h3 id=&quot;vu
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>数组之前的赋值带来的问题</title>
