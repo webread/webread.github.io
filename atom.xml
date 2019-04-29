@@ -18,8 +18,8 @@
   
   <entry>
     <title>facade之外观模式</title>
-    <link href="http://yoursite.com/2019/04/29/%E5%89%8D%E7%AB%AF%E4%B9%8Bfacade%E6%80%9D%E6%83%B3/"/>
-    <id>http://yoursite.com/2019/04/29/前端之facade思想/</id>
+    <link href="http://yoursite.com/2019/04/29/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B9%8Bfacade%E6%80%9D%E6%83%B3/"/>
+    <id>http://yoursite.com/2019/04/29/前端开发之facade思想/</id>
     <published>2019-04-29T08:38:25.000Z</published>
     <updated>2019-04-29T06:11:26.136Z</updated>
     
@@ -36,6 +36,20 @@
     
     
       <category term="facade" scheme="http://yoursite.com/tags/facade/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dojo杂谈</title>
+    <link href="http://yoursite.com/2019/04/29/dojo%E6%9D%82%E8%B0%88/"/>
+    <id>http://yoursite.com/2019/04/29/dojo杂谈/</id>
+    <published>2019-04-29T06:17:17.000Z</published>
+    <updated>2019-04-29T06:17:17.605Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
     
   </entry>
   
