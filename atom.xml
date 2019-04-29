@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-24T10:27:27.619Z</updated>
+  <updated>2019-04-29T06:11:26.136Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>facade之外观模式</title>
+    <link href="http://yoursite.com/2019/04/29/%E5%89%8D%E7%AB%AF%E4%B9%8Bfacade%E6%80%9D%E6%83%B3/"/>
+    <id>http://yoursite.com/2019/04/29/前端之facade思想/</id>
+    <published>2019-04-29T08:38:25.000Z</published>
+    <updated>2019-04-29T06:11:26.136Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="facade模式的本质就是封装交互，简化调用。其目的并不是给予子系统添加新的功能接口，而是为了让外部减少与子系统内多个模块的交互，松散耦合，从而让外部能够更简单地使用子系统。"><a href="#facade模式的本质就是封装交互，简化调用。其目的并不是给予子系统添加新的功能接口，而是为了让外部减少与子系统内多个模块的交互，松散耦合，从而让外部能够更简单地使用子系统。" class="headerlink" title="facade模式的本质就是封装交互，简化调用。其目的并不是给予子系统添加新的功能接口，而是为了让外部减少与子系统内多个模块的交互，松散耦合，从而让外部能够更简单地使用子系统。"></a>facade模式的本质就是封装交互，简化调用。其目的并不是给予子系统添加新的功能接口，而是为了让外部减少与子系统内多个模块的交互，松散耦合，从而让外部能够更简单地使用子系统。</h3><p>以项目实际开发为例，前端调用同一个服务的接口有很多种类型，可能仅是路径和参数不同，但是服务器地址是一样的，为了简化调用，我们往往这样做。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//以实际项目开发为例：</span><br><span class="line"></span><br><span class="line">var appUrl = <span class="string">"http://app.test.cloud.com.cn"</span>,//应用服务</span><br><span class="line">grmUrl = <span class="string">"http://grm.test.cloud.com.cn"</span>;//grm服务</span><br><span class="line">//如果在多个业务模块调用appUrl,当url路径或者参数发生变动时，前端需要挨着挨挨冻多个代码处的相关参数，这样给工作带来了很多麻烦，为了简化调用我们可以这样做</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> AppFacade (url)&#123;//appFacade 接口文件</span><br><span class="line">this.url = url;</span><br><span class="line">this.update:<span class="keyword">function</span>(id)&#123;request.get(this.url+<span class="string">"update?id="</span>+id)&#125;;//编辑接口，在多个模块可以调用</span><br><span class="line">this.add:<span class="keyword">function</span>(id)&#123;request.get(this.url+<span class="string">"add?id="</span>+id)&#125;;//添加接口，在多个模块可以调用</span><br><span class="line">&#125;</span><br><span class="line">//在引用该相关服务接口的模块汇总new出对应的实例即可。如果修改编辑或者添加对应的接口，可以直接去facade文件修改。</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;facade模式的本质就是封装交互，简化调用。其目的并不是给予子系统添加新的功能接口，而是为了让外部减少与子系统内多个模块的交互，松散耦合，从而让外部能够更简单地使用子系统。&quot;&gt;&lt;a href=&quot;#facade模式的本质就是封装交互，简化调用。其目的并不是给予子系
+      
+    
+    </summary>
+    
+    
+      <category term="facade" scheme="http://yoursite.com/tags/facade/"/>
+    
+  </entry>
   
   <entry>
     <title>关于原型</title>
