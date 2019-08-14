@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-05T03:07:24.740Z</updated>
+  <updated>2019-08-14T01:15:58.194Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES6知识总结</title>
+    <link href="http://yoursite.com/2019/08/13/ES6%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2019/08/13/ES6知识总结/</id>
+    <published>2019-08-13T09:02:22.000Z</published>
+    <updated>2019-08-14T01:15:58.194Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="es6环境搭建流程"><a href="#es6环境搭建流程" class="headerlink" title="es6环境搭建流程"></a>es6环境搭建流程</h3><p>》》通过npm init 生成 package.json<br>》》通过npm install webpack -D 生成node_moudles<br>》》webpack.config.js配置文件<br>》》src(开发阶段的目录)<br>    index.html<br>    index.js(入口文件)<br>    jsfiles(存放JS的文件夹)<br>》》public(生产阶段的目录)<br>》》</p><h3 id="let-const"><a href="#let-const" class="headerlink" title="let const"></a>let const</h3><p>》》只能在所声明的模块内有效；<br>》》不能重复声明变量，否则报错；<br>》》只能先声明，后使用变量；</p><p>const:<br>》》用来声明常量；<br>》》声明过的常亮值只能读，不能改写；<br>》》const声明的对象可以改变其属性值；</p><h3 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h3><p>》》babel 把es6转化成es3或者es5;(IE8等浏览器不支持ES6语法)<br>》》ployfill:由于很多语法不能转码，需要安装ployfill;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;es6环境搭建流程&quot;&gt;&lt;a href=&quot;#es6环境搭建流程&quot; class=&quot;headerlink&quot; title=&quot;es6环境搭建流程&quot;&gt;&lt;/a&gt;es6环境搭建流程&lt;/h3&gt;&lt;p&gt;》》通过npm init 生成 package.json&lt;br&gt;》》通过npm in
+      
+    
+    </summary>
+    
+    
+      <category term="let const var" scheme="http://yoursite.com/tags/let-const-var/"/>
+    
+  </entry>
   
   <entry>
     <title>二三维一体化项目(GIS平台)项目总结</title>
